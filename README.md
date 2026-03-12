@@ -1,30 +1,13 @@
-
-<h1 align="center">Dead by Daylight - Database</h1>
+<h1 align="center">Dead by Daylight - Database (JSON Scraper)</h1>
 
 <div align="center">
-  <strong>Automatically updated</strong>
-</div>
-<div align="center">
-  Fetches new information from the <a href="https://deadbydaylight.fandom.com/wiki/Dead_by_Daylight_Wiki">Dead by Daylight - Wiki</a> every hour
+  Fetches new information from the <a href="https://deadbydaylight.fandom.com/wiki/Dead_by_Daylight_Wiki">Dead by Daylight - Wiki</a> and outputs to local JSON files.
 </div>
 
 <br />
 
 <div align="center">
-  <!-- Stability -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
-    <img src="https://img.shields.io/badge/stability-stable-g.svg?style=flat-square"
-      alt="API stability" />
-  </a>
-  <!-- Standard -->
-  <a href="https://standardjs.com">
-    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
-      alt="Standard" />
-  </a>
-</div>
-
-<div align="center">
-  <sub>Built with ❤︎ by
+  <sub>Originally built with ❤︎ by
   <a href="https://github.com/Techial">Techial</a> and
   <a href="https://github.com/Techial/DBD-Database/graphs/contributors">
     contributors
@@ -33,80 +16,74 @@
 
 ## Table of Contents
 - [Features](#features)
-- [API](#api)
+- [How to Use](#how-to-use)
 - [Data Structure](#data-structure)
-- [Support](#support)
 
 ## Features
-- __organized:__ output doesn't look like it was taken out of a tumbler, thrown on the ground and stamped on
-- __always up-to-date:__ fetches data from the [Dead by Daylight - Wiki](https://deadbydaylight.fandom.com/wiki/Dead_by_Daylight_Wiki) every hour
+- **Organized:** Outputs parsed data neatly into standalone JSON files.
+- **Up-to-date:** Allows you to fetch the latest data from the [Dead by Daylight - Wiki](https://deadbydaylight.fandom.com/wiki/Dead_by_Daylight_Wiki) whenever you need it via a headless Puppeteer browser.
+- **No Database Required:** Modified from its original form to write directly to the local filesystem inside the `data/` folder, skipping MongoDB configuration entirely.
 
-## API
-Retrieve Killer Perks at:
-<blockquote>/API/v1/killer_perks</blockquote>
-<br/>
+## How to Use
+1. Install dependencies:
+   ```bash
+   pnpm install
+   # Ensure puppeteer browsers are installed if not done already:
+   npx puppeteer browsers install chrome
+   ```
 
-Retrieve Survivor Perks at:
-<blockquote>/API/v1/survivor_perks</blockquote>
-<br/>
+2. Run the update script:
+   ```bash
+   node update.js
+   ```
 
-Retrieve Killers at:
-<blockquote>/API/v1/killers</blockquote>
-<br/>
-
-Retrieve Survivors at:
-<blockquote>/API/v1/survivors</blockquote>
-<br/>
+The script will generate 4 files in the `data/` directory:
+- `killer_perks.json`
+- `survivor_perks.json`
+- `killers.json`
+- `survivors.json`
 
 ## Data Structure
-Perks:
+
+Perks (`killer_perks.json`, `survivor_perks.json`):
 ```json
 {
   "perks": [{
-    "_id": "mongoDB generated unique ObjectID",
-    "name": "Perk display name (With space and all characters)",
     "URIName": "URL safe string (name of perk)",
+    "name": "Perk display name (With space and all characters)",
     "iconURL": "Perk icon URL",
-    "characterName": "Name of Character perk belongs to - THIS FIELD IS OMITTED IF NO CHARACTER IS ASSOCIATED WITH THE PERK",
-    "character": "ObjectID of Character perk belongs to - THIS FIELD IS OMITTED IF NO CHARACTER IS ASSOCIATED WITH THE PERK",
-    "content": "Display text (with HTML elements) scraped from https://deadbydaylight.fandom.com/",
-    "contentText": "Same as `content` without HTML elements"
-  },
-  ...
+    "content": "Display text (with HTML elements) scraped from the wiki",
+    "contentText": "Same as `content` without HTML elements",
+    "characterName": "Name of Character perk belongs to (Omitted if general perk)",
+    "character": "URIName of Character perk belongs to (Omitted if general perk)"
+  }
   ]
 }
 ```
 
-Survivors:
+Survivors (`survivors.json`):
 ```json
 {
   "survivors": [{
-    "_id": "mongoDB generated unique ObjectID",
     "name": "Character display name (With space and all characters)",
     "URIName": "URL safe string (name of survivor)",
     "iconURL": "Character image URL",
     "link": "Character URL at https://deadbydaylight.fandom.com/"
-  },
-  ...
+  }
   ]
 }
 ```
 
-Killers:
+Killers (`killers.json`):
 ```json
 {
   "killers": [{
-    "_id": "mongoDB generated unique ObjectID",
     "name": "Full Character name (With space and all characters)",
     "killerName": "Short name used in-game (e.g Trapper, Wraith etc)",
     "URIName": "URL safe string (name of Killer)",
     "iconURL": "Character image URL",
     "link": "Character URL at https://deadbydaylight.fandom.com/"
-  },
-  ...
+  }
   ]
 }
 ```
-
-## Support
-Open an issue if you feel like anything needs to be added. I'll gladly review pull requests and merge them if deemed to be useful!
