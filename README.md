@@ -43,6 +43,17 @@ The script will generate 4 files in the `data/` directory:
 - `killers.json`
 - `survivors.json`
 
+3. Create the Database Seed for Cloudflare D1:
+   ```bash
+   node generate_seed.js
+   ```
+   This reads the 4 JSON files in the `data/` directory and creates `database_seed.sql`. This file contains the schema and bulk INSERT operations.
+
+4. Execute into Cloudflare D1 (if using Wrangler locally):
+   ```bash
+   wrangler d1 execute <DATABASE_NAME> --local --file=./database_seed.sql
+   ```
+
 ## Data Structure
 
 Perks (`killer_perks.json`, `survivor_perks.json`):
