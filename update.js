@@ -1,14 +1,7 @@
 import perkJobs from './jobs/perk_jobs.js'
 import charJobs from './jobs/char_jobs.js'
-import DBI from './db/db.js'
 
-// Open connection and wait for it to be ready
-DBI.initConnection()
-
-async function runUpdate () {
-  // Wait for database connection to be ready
-  await DBI.waitForConnection()
-
+async function runUpdate() {
   // Update characters first
   const charRes = await charJobs.updateKillersAndSurvivors()
   console.log(charRes)
@@ -17,7 +10,7 @@ async function runUpdate () {
   const perkRes = await perkJobs.updateKillerAndSurvivorPerks()
   console.log(perkRes)
 
-  console.log('Database update finished.')
+  console.log('Database files update finished.')
   process.exit(0)
 }
 

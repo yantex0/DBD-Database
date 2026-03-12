@@ -1,0 +1,292 @@
+{
+  "survivors": [
+    {
+      "name": "Dwight Fairfield",
+      "URIName": "Dwight_Fairfield",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/S01_DwightFairfield_Portrait.png/revision/latest?cb=20240517102919",
+      "link": "https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"
+    },
+    {
+      "name": "Meg Thomas",
+      "URIName": "Meg_Thomas",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/S02_MegThomas_Portrait.png/revision/latest?cb=20240517102922",
+      "link": "https://deadbydaylight.fandom.com/wiki/Meg_Thomas"
+    },
+    {
+      "name": "Claudette Morel",
+      "URIName": "Claudette_Morel",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/S03_ClaudetteMorel_Portrait.png/revision/latest?cb=20240517102925",
+      "link": "https://deadbydaylight.fandom.com/wiki/Claudette_Morel"
+    },
+    {
+      "name": "Jake Park",
+      "URIName": "Jake_Park",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/18/S04_JakePark_Portrait.png/revision/latest?cb=20240517102927",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jake_Park"
+    },
+    {
+      "name": "Nea Karlsson",
+      "URIName": "Nea_Karlsson",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e6/S05_NeaKarlsson_Portrait.png/revision/latest?cb=20240517102930",
+      "link": "https://deadbydaylight.fandom.com/wiki/Nea_Karlsson"
+    },
+    {
+      "name": "Laurie Strode",
+      "URIName": "Laurie_Strode",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/04/S06_LaurieStrode_Portrait.png/revision/latest?cb=20240517102955",
+      "link": "https://deadbydaylight.fandom.com/wiki/Laurie_Strode"
+    },
+    {
+      "name": "Ace Visconti",
+      "URIName": "Ace_Visconti",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b9/S07_AceVisconti_Portrait.png/revision/latest?cb=20240517102959",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ace_Visconti"
+    },
+    {
+      "name": "Bill Overbeck",
+      "URIName": "Bill_Overbeck",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S08_BillOverbeck_Portrait.png/revision/latest?cb=20240517103047",
+      "link": "https://deadbydaylight.fandom.com/wiki/Bill_Overbeck"
+    },
+    {
+      "name": "Feng Min",
+      "URIName": "Feng_Min",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a3/S09_FengMin_Portrait.png/revision/latest?cb=20240517103003",
+      "link": "https://deadbydaylight.fandom.com/wiki/Feng_Min"
+    },
+    {
+      "name": "David King",
+      "URIName": "David_King",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2a/S10_DavidKing_Portrait.png/revision/latest?cb=20240517103006",
+      "link": "https://deadbydaylight.fandom.com/wiki/David_King"
+    },
+    {
+      "name": "Quentin Smith",
+      "URIName": "Quentin_Smith",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/40/S11_QuentinSmith_Portrait.png/revision/latest?cb=20240517103016",
+      "link": "https://deadbydaylight.fandom.com/wiki/Quentin_Smith"
+    },
+    {
+      "name": "David Tapp",
+      "URIName": "David_Tapp",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d2/S12_DavidTapp_Portrait.png/revision/latest?cb=20240517103025",
+      "link": "https://deadbydaylight.fandom.com/wiki/David_Tapp"
+    },
+    {
+      "name": "Kate Denson",
+      "URIName": "Kate_Denson",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S13_KateDenson_Portrait.png/revision/latest?cb=20240517103032",
+      "link": "https://deadbydaylight.fandom.com/wiki/Kate_Denson"
+    },
+    {
+      "name": "Adam Francis",
+      "URIName": "Adam_Francis",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a5/S14_AdamFrancis_Portrait.png/revision/latest?cb=20240517103037",
+      "link": "https://deadbydaylight.fandom.com/wiki/Adam_Francis"
+    },
+    {
+      "name": "Jeff Johansen",
+      "URIName": "Jeff_Johansen",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/S15_JeffJohansen_Portrait.png/revision/latest?cb=20240517103044",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jeff_Johansen"
+    },
+    {
+      "name": "Jane Romero",
+      "URIName": "Jane_Romero",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/S16_JaneRomero_Portrait.png/revision/latest?cb=20240517103049",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jane_Romero"
+    },
+    {
+      "name": "Ash Williams",
+      "URIName": "Ash_Williams",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/S17_AshWilliams_Portrait.png/revision/latest?cb=20240517102936",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ash_Williams"
+    },
+    {
+      "name": "Nancy Wheeler",
+      "URIName": "Nancy_Wheeler",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/70/S18_NancyWheeler_Portrait.png/revision/latest?cb=20240517103059",
+      "link": "https://deadbydaylight.fandom.com/wiki/Nancy_Wheeler"
+    },
+    {
+      "name": "Steve Harrington",
+      "URIName": "Steve_Harrington",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/S19_SteveHarrington_Portrait.png/revision/latest?cb=20240517103058",
+      "link": "https://deadbydaylight.fandom.com/wiki/Steve_Harrington"
+    },
+    {
+      "name": "Yui Kimura",
+      "URIName": "Yui_Kimura",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/13/S20_YuiKimura_Portrait.png/revision/latest?cb=20240517103107",
+      "link": "https://deadbydaylight.fandom.com/wiki/Yui_Kimura"
+    },
+    {
+      "name": "Zarina Kassir",
+      "URIName": "Zarina_Kassir",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d9/S21_ZarinaKassir_Portrait.png/revision/latest?cb=20240517103111",
+      "link": "https://deadbydaylight.fandom.com/wiki/Zarina_Kassir"
+    },
+    {
+      "name": "Cheryl Mason",
+      "URIName": "Cheryl_Mason",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1d/S22_CherylMason_Portrait.png/revision/latest?cb=20240517103118",
+      "link": "https://deadbydaylight.fandom.com/wiki/Cheryl_Mason"
+    },
+    {
+      "name": "Felix Richter",
+      "URIName": "Felix_Richter",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9e/S23_FelixRichter_Portrait.png/revision/latest?cb=20240517103128",
+      "link": "https://deadbydaylight.fandom.com/wiki/Felix_Richter"
+    },
+    {
+      "name": "Élodie Rakoto",
+      "URIName": "%C3%89lodie_Rakoto",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/S24_ElodieRakoto_Portrait.png/revision/latest?cb=20240517102940",
+      "link": "https://deadbydaylight.fandom.com/wiki/%C3%89lodie_Rakoto"
+    },
+    {
+      "name": "Yun-Jin Lee",
+      "URIName": "Yun-Jin_Lee",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f7/S25_Yun-JinLee_Portrait.png/revision/latest?cb=20240517102951",
+      "link": "https://deadbydaylight.fandom.com/wiki/Yun-Jin_Lee"
+    },
+    {
+      "name": "Jill Valentine",
+      "URIName": "Jill_Valentine",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/db/S26_JillValentine_Portrait.png/revision/latest?cb=20240517103011",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jill_Valentine"
+    },
+    {
+      "name": "Leon Scott Kennedy",
+      "URIName": "Leon_Scott_Kennedy",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7d/S27_LeonScottKennedy_Portrait.png/revision/latest?cb=20240517103013",
+      "link": "https://deadbydaylight.fandom.com/wiki/Leon_Scott_Kennedy"
+    },
+    {
+      "name": "Mikaela Reid",
+      "URIName": "Mikaela_Reid",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3f/S28_MikaelaReid_Portrait.png/revision/latest?cb=20240517103039",
+      "link": "https://deadbydaylight.fandom.com/wiki/Mikaela_Reid"
+    },
+    {
+      "name": "Jonah Vasquez",
+      "URIName": "Jonah_Vasquez",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/37/S29_JonahVasquez_Portrait.png/revision/latest?cb=20240517103042",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jonah_Vasquez"
+    },
+    {
+      "name": "Yoichi Asakawa",
+      "URIName": "Yoichi_Asakawa",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/S30_YoichiAsakawa_Portrait.png/revision/latest?cb=20240517103046",
+      "link": "https://deadbydaylight.fandom.com/wiki/Yoichi_Asakawa"
+    },
+    {
+      "name": "Haddie Kaur",
+      "URIName": "Haddie_Kaur",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/S31_HaddieKaur_Portrait.png/revision/latest?cb=20240517103051",
+      "link": "https://deadbydaylight.fandom.com/wiki/Haddie_Kaur"
+    },
+    {
+      "name": "Ada Wong",
+      "URIName": "Ada_Wong",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5e/S32_AdaWong_Portrait.png/revision/latest?cb=20240517103055",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ada_Wong"
+    },
+    {
+      "name": "Rebecca Chambers",
+      "URIName": "Rebecca_Chambers",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fd/S33_RebeccaChambers_Portrait.png/revision/latest?cb=20240517103056",
+      "link": "https://deadbydaylight.fandom.com/wiki/Rebecca_Chambers"
+    },
+    {
+      "name": "Vittorio Toscano",
+      "URIName": "Vittorio_Toscano",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/S34_VittorioToscano_Portrait.png/revision/latest?cb=20240517103101",
+      "link": "https://deadbydaylight.fandom.com/wiki/Vittorio_Toscano"
+    },
+    {
+      "name": "Thalita Lyra",
+      "URIName": "Thalita_Lyra",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/96/S35_ThalitaLyra_Portrait.png/revision/latest?cb=20240517103104",
+      "link": "https://deadbydaylight.fandom.com/wiki/Thalita_Lyra"
+    },
+    {
+      "name": "Renato Lyra",
+      "URIName": "Renato_Lyra",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/S36_RenatoLyra_Portrait.png/revision/latest?cb=20240517103105",
+      "link": "https://deadbydaylight.fandom.com/wiki/Renato_Lyra"
+    },
+    {
+      "name": "Gabriel Soma",
+      "URIName": "Gabriel_Soma",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/S37_GabrielSoma_Portrait.png/revision/latest?cb=20240517103114",
+      "link": "https://deadbydaylight.fandom.com/wiki/Gabriel_Soma"
+    },
+    {
+      "name": "Nicolas Cage",
+      "URIName": "Nicolas_Cage",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/S38_NicolasCage_Portrait.png/revision/latest?cb=20240517103115",
+      "link": "https://deadbydaylight.fandom.com/wiki/Nicolas_Cage"
+    },
+    {
+      "name": "Ellen Ripley",
+      "URIName": "Ellen_Ripley",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/15/S39_EllenRipley_Portrait.png/revision/latest?cb=20240517103125",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ellen_Ripley"
+    },
+    {
+      "name": "Alan Wake",
+      "URIName": "Alan_Wake",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/43/S40_AlanWake_Portrait.png/revision/latest?cb=20240517103134",
+      "link": "https://deadbydaylight.fandom.com/wiki/Alan_Wake"
+    },
+    {
+      "name": "Sable Ward",
+      "URIName": "Sable_Ward",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S41_SableWard_Portrait.png/revision/latest?cb=20240517102934",
+      "link": "https://deadbydaylight.fandom.com/wiki/Sable_Ward"
+    },
+    {
+      "name": "Aestri Yazar &amp; Baermar Uraz",
+      "URIName": "Aestri_Yazar_%26_Baermar_Uraz",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e0/S42_TheTroupe_Portrait.png/revision/latest?cb=20240517102947",
+      "link": "https://deadbydaylight.fandom.com/wiki/Aestri_Yazar_%26_Baermar_Uraz"
+    },
+    {
+      "name": "Lara Croft",
+      "URIName": "Lara_Croft",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/S43_LaraCroft_Portrait.png/revision/latest?cb=20240625161310",
+      "link": "https://deadbydaylight.fandom.com/wiki/Lara_Croft"
+    },
+    {
+      "name": "Trevor Belmont",
+      "URIName": "Trevor_Belmont",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f8/S44_TrevorBelmont_Portrait.png/revision/latest?cb=20240806171145",
+      "link": "https://deadbydaylight.fandom.com/wiki/Trevor_Belmont"
+    },
+    {
+      "name": "Taurie Cain",
+      "URIName": "Taurie_Cain",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/72/S45_TaurieCain_Portrait.png/revision/latest?cb=20241107164720",
+      "link": "https://deadbydaylight.fandom.com/wiki/Taurie_Cain"
+    },
+    {
+      "name": "Rick Grimes",
+      "URIName": "Rick_Grimes",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/4f/S46_RickGrimes_Portrait.png/revision/latest?cb=20260106211051",
+      "link": "https://deadbydaylight.fandom.com/wiki/Rick_Grimes"
+    },
+    {
+      "name": "Michonne Grimes",
+      "URIName": "Michonne_Grimes",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/aa/S47_MichonneGrimes_Portrait.png/revision/latest?cb=20260106211509",
+      "link": "https://deadbydaylight.fandom.com/wiki/Michonne_Grimes"
+    },
+    {
+      "name": "Vee Boonyasak",
+      "URIName": "Vee_Boonyasak",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/ce/S48_VeeBoonyasak_Portrait.png/revision/latest?cb=20251127232732",
+      "link": "https://deadbydaylight.fandom.com/wiki/Vee_Boonyasak"
+    }
+  ]
+}

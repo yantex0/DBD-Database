@@ -1,7 +1,12 @@
 import { stripHtml } from 'string-strip-html'
 import HTMLParser from 'node-html-parser'
 import webReader from '../utils/web_reader.js'
-import { survivorPerk, killerPerk } from '../db/models/perk.js'
+import fs from 'fs/promises'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 class perkJobs {
   static #addURL = 'https://deadbydaylight.fandom.com'
@@ -12,7 +17,7 @@ class perkJobs {
   static #survivorPerksSelector = "h3:has(span[id*='Survivor_Perks'])+table>tbody"
   static #killerPerksSelector = "h3:has(span[id*='Killer_Perks'])+table>tbody"
 
-  static #retrievePerks (selector) {
+  static #retrievePerks(selector) {
     if (!selector) { return false }
 
     return new Promise((resolve, reject) => {
@@ -77,137 +82,81 @@ class perkJobs {
     })
   }
 
-  static async retrieveSurvivorPerks () {
+  static async ensureDataDir() {
+    const dataDir = path.join(__dirname, '..', 'data')
+    try {
+      await fs.access(dataDir)
+    } catch {
+      await fs.mkdir(dataDir)
+    }
+    return dataDir
+  }
+
+  static async retrieveSurvivorPerks() {
     try {
       const perks = await this.#retrievePerks(this.#survivorPerksSelector)
-      const bulkOps = perks.map(perk => {
-        return {
-          updateOne: {
-            filter: {
-              name: perk.name
-            },
-            update: perk,
-            upsert: true
-          }
+      const dataDir = await this.ensureDataDir()
+
+      // Read current survivors to inject character link
+      let characters = []
+      try {
+        const charData = await fs.readFile(path.join(dataDir, 'survivors.json'), 'utf8')
+        characters = JSON.parse(charData).survivors
+      } catch (e) {
+        console.warn('survivors.json not found, skipping character lookup logic')
+      }
+
+      perks.forEach(perk => {
+        if (perk.characterName) {
+          const match = characters.find(c => c.name === perk.characterName)
+          if (match) perk.character = match.URIName // using URIName as a safe reference ID
         }
       })
 
-      await survivorPerk.bulkWrite(bulkOps)
-
-      // Now add all character references
-      await survivorPerk.aggregate([
-        // Only grab perks with characters assigned
-        {
-          $match: {
-            characterName: { $exists: true }
-          }
-        },
-        // Get character from perk.characterName
-        // $project it to only select _id from character
-        {
-          $lookup: {
-            from: 'survivors',
-            localField: 'characterName',
-            foreignField: 'name',
-            as: 'character'
-          }
-        },
-        // Unpack array into an object
-        {
-          $unwind: { path: '$character' }
-        },
-        // Overwrite character field to only be _id from object unpacked above
-        {
-          $set: { character: { $getField: { field: '_id', input: '$character' } } }
-        },
-        // Now merge the updated cells into the table, so we also keep the perks without any characters assigned
-        {
-          $merge: {
-            into: "survivorperks",
-            whenMatched: "replace",
-            whenNotMatched: "insert"
-          }
-        }
-      ])
-
-      console.log('Successfully fetched Survivor perks.')
+      await fs.writeFile(path.join(dataDir, 'survivor_perks.json'), JSON.stringify({ perks }, null, 2))
+      console.log('Successfully fetched and saved Survivor perks.')
     } catch (error) {
       throw new Error('Failed fetching Survivor perks ' + error)
     }
   }
 
-  static async retrieveKillerPerks () {
+  static async retrieveKillerPerks() {
     try {
       const perks = await this.#retrievePerks(this.#killerPerksSelector)
-      const bulkOps = perks.map(perk => {
-        return {
-          updateOne: {
-            filter: {
-              name: perk.name
-            },
-            update: perk,
-            upsert: true
-          }
+      const dataDir = await this.ensureDataDir()
+
+      let characters = []
+      try {
+        const charData = await fs.readFile(path.join(dataDir, 'killers.json'), 'utf8')
+        characters = JSON.parse(charData).killers
+      } catch (e) {
+        console.warn('killers.json not found, skipping character lookup logic')
+      }
+
+      perks.forEach(perk => {
+        if (perk.characterName) {
+          // Killer link in DB uses 'killerName' but the html references it slightly differently sometimes
+          const match = characters.find(c => c.name === perk.characterName || c.killerName === perk.characterName)
+          if (match) perk.character = match.URIName
         }
       })
 
-      await killerPerk.bulkWrite(bulkOps)
-
-      // Now add all character references
-      await killerPerk.aggregate([
-        // Only grab perks with characters assigned
-        {
-          $match: {
-            characterName: { $exists: true } 
-          }
-        },
-        // Get character from perk.characterName
-        // $project it to only select _id from character
-        {
-          $lookup: {
-            from: 'killers',
-            localField: 'characterName',
-            foreignField: 'killerName',
-            as: 'character'
-          }
-        },
-        // Unpack array into an object
-        {
-          $unwind: { path: '$character' }
-        },
-        // Overwrite character field to only be _id from object unpacked above
-        {
-          $set: {
-            character: {
-              $getField: { field: '_id', input: '$character' }
-            }
-          }
-        },
-        // Now merge the updated cells into the table, so we also keep the perks without any characters assigned
-        {
-          $merge: {
-            into: "killerperks",
-            whenMatched: "replace",
-            whenNotMatched: "insert"
-          }
-        }
-      ])
-
-      console.log('Successfully fetched Killer perks.')
+      await fs.writeFile(path.join(dataDir, 'killer_perks.json'), JSON.stringify({ perks }, null, 2))
+      console.log('Successfully fetched and saved Killer perks.')
     } catch (error) {
       throw new Error('Failed fetching Killer perks ' + error)
     }
   }
 
-  static updateKillerAndSurvivorPerks () {
-    console.log('Updating perk database...')
+  static updateKillerAndSurvivorPerks() {
+    console.log('Updating perk local files...')
     return new Promise((resolve, reject) => {
       try {
         Promise.all([this.retrieveSurvivorPerks(), this.retrieveKillerPerks()]).then(() => {
-          resolve('Successfully updated perk database')
+          resolve('Successfully updated perk files')
         })
       } catch (error) {
-        reject(new Error('Perk database update failed'))
+        reject(new Error('Perk files update failed'))
       }
     })
   }

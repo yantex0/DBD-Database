@@ -1,6 +1,11 @@
 import HTMLParser from 'node-html-parser'
 import webReader from '../utils/web_reader.js'
-import { Survivor, Killer } from '../db/models/character.js'
+import fs from 'fs/promises'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 class charJobs {
   static #addURL = 'https://deadbydaylight.fandom.com'
@@ -10,7 +15,7 @@ class charJobs {
   static #survivorsSelector = "h2:has(span[id='Survivors'])+dl+div"
   static #killersSelector = "h2:has(span[id='Killers'])+dl+div"
 
-  static #retrieveCharacters (selector) {
+  static #retrieveCharacters(selector) {
     if (!selector) { return false }
 
     return new Promise((resolve, reject) => {
@@ -67,61 +72,47 @@ class charJobs {
     })
   }
 
-  static async retrieveSurvivors () {
+  static async ensureDataDir() {
+    const dataDir = path.join(__dirname, '..', 'data')
+    try {
+      await fs.access(dataDir)
+    } catch {
+      await fs.mkdir(dataDir)
+    }
+    return dataDir
+  }
+
+  static async retrieveSurvivors() {
     try {
       const survivors = await this.#retrieveCharacters(this.#survivorsSelector)
-      const bulkOps = survivors.map(survivor => {
-        return {
-          updateOne: {
-            filter: {
-              name: survivor.name
-            },
-            update: survivor,
-            upsert: true
-          }
-        }
-      })
-
-      await Survivor.bulkWrite(bulkOps)
-
-      console.log('Successfully fetched Survivors.')
+      const dataDir = await this.ensureDataDir()
+      await fs.writeFile(path.join(dataDir, 'survivors.json'), JSON.stringify({ survivors }, null, 2))
+      console.log('Successfully fetched and saved Survivors to survivors.json.')
     } catch (error) {
       throw new Error('Failed fetching Survivors: ' + error.message)
     }
   }
 
-  static async retrieveKillers () {
+  static async retrieveKillers() {
     try {
       const killers = await this.#retrieveCharacters(this.#killersSelector)
-      const bulkOps = killers.map(killer => {
-        return {
-          updateOne: {
-            filter: {
-              name: killer.name
-            },
-            update: killer,
-            upsert: true
-          }
-        }
-      })
-
-      await Killer.bulkWrite(bulkOps)
-
-      console.log('Successfully fetched Killers.')
+      const dataDir = await this.ensureDataDir()
+      await fs.writeFile(path.join(dataDir, 'killers.json'), JSON.stringify({ killers }, null, 2))
+      console.log('Successfully fetched and saved Killers to killers.json.')
     } catch (error) {
       throw new Error('Failed fetching Killers: ' + error.message)
     }
   }
 
-  static updateKillersAndSurvivors () {
-    console.log('Updating character database...')
+  static updateKillersAndSurvivors() {
+    console.log('Updating character database local files...')
     return new Promise((resolve, reject) => {
       try {
         Promise.all([this.retrieveSurvivors(), this.retrieveKillers()]).then(() => {
-          resolve('Successfully updated character database')
+          resolve('Successfully updated character files')
         })
       } catch (error) {
-        reject(new Error('Character database update failed'))
+        reject(new Error('Character files update failed'))
       }
     })
   }

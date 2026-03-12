@@ -1,0 +1,284 @@
+{
+  "killers": [
+    {
+      "name": "Evan MacMillan",
+      "killerName": "The Trapper",
+      "URIName": "Evan_MacMillan",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K01_TheTrapper_Portrait.png/revision/latest?cb=20240517102906",
+      "link": "https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"
+    },
+    {
+      "name": "Philip Ojomo",
+      "killerName": "The Wraith",
+      "URIName": "Philip_Ojomo",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/K02_TheWraith_Portrait.png/revision/latest?cb=20240517102909",
+      "link": "https://deadbydaylight.fandom.com/wiki/Philip_Ojomo"
+    },
+    {
+      "name": "Max Thompson Jr.",
+      "killerName": "The Hillbilly",
+      "URIName": "Max_Thompson_Jr.",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K03_TheHillbilly_Portrait.png/revision/latest?cb=20240517102913",
+      "link": "https://deadbydaylight.fandom.com/wiki/Max_Thompson_Jr."
+    },
+    {
+      "name": "Sally Smithson",
+      "killerName": "The Nurse",
+      "URIName": "Sally_Smithson",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K04_TheNurse_Portrait.png/revision/latest?cb=20240517102916",
+      "link": "https://deadbydaylight.fandom.com/wiki/Sally_Smithson"
+    },
+    {
+      "name": "Michael Myers",
+      "killerName": "The Shape",
+      "URIName": "Michael_Myers",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b5/K05_TheShape_Portrait.png/revision/latest?cb=20240517102953",
+      "link": "https://deadbydaylight.fandom.com/wiki/Michael_Myers"
+    },
+    {
+      "name": "Lisa Sherwood",
+      "killerName": "The Hag",
+      "URIName": "Lisa_Sherwood",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c7/K06_TheHag_Portrait.png/revision/latest?cb=20240517102957",
+      "link": "https://deadbydaylight.fandom.com/wiki/Lisa_Sherwood"
+    },
+    {
+      "name": "Herman Carter",
+      "killerName": "The Doctor",
+      "URIName": "Herman_Carter",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/58/K07_TheDoctor_Portrait.png/revision/latest?cb=20240517103001",
+      "link": "https://deadbydaylight.fandom.com/wiki/Herman_Carter"
+    },
+    {
+      "name": "Anna",
+      "killerName": "The Huntress",
+      "URIName": "Anna",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K08_TheHuntress_Portrait.png/revision/latest?cb=20240517103005",
+      "link": "https://deadbydaylight.fandom.com/wiki/Anna"
+    },
+    {
+      "name": "Bubba Sawyer",
+      "killerName": "The Cannibal",
+      "URIName": "Bubba_Sawyer",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6f/K09_TheCannibal_Portrait.png/revision/latest?cb=20240517102942",
+      "link": "https://deadbydaylight.fandom.com/wiki/Bubba_Sawyer"
+    },
+    {
+      "name": "Freddy Krueger",
+      "killerName": "The Nightmare",
+      "URIName": "Freddy_Krueger",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d5/K10_TheNightmare_Portrait.png/revision/latest?cb=20240517103015",
+      "link": "https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"
+    },
+    {
+      "name": "Amanda Young",
+      "killerName": "The Pig",
+      "URIName": "Amanda_Young",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5c/K11_ThePig_Portrait.png/revision/latest?cb=20240517103021",
+      "link": "https://deadbydaylight.fandom.com/wiki/Amanda_Young"
+    },
+    {
+      "name": "Jeffrey Hawk",
+      "killerName": "The Clown",
+      "URIName": "Jeffrey_Hawk",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K12_TheClown_Portrait.png/revision/latest?cb=20240517103029",
+      "link": "https://deadbydaylight.fandom.com/wiki/Jeffrey_Hawk"
+    },
+    {
+      "name": "Rin Yamaoka",
+      "killerName": "The Spirit",
+      "URIName": "Rin_Yamaoka",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K13_TheSpirit_Portrait.png/revision/latest?cb=20240517103034",
+      "link": "https://deadbydaylight.fandom.com/wiki/Rin_Yamaoka"
+    },
+    {
+      "name": "Frank, Julie, Susie, Joey",
+      "killerName": "The Legion",
+      "URIName": "Frank,_Julie,_Susie,_Joey",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/53/K14_TheLegion_Portrait.png/revision/latest?cb=20240517103043",
+      "link": "https://deadbydaylight.fandom.com/wiki/Frank,_Julie,_Susie,_Joey"
+    },
+    {
+      "name": "Adiris",
+      "killerName": "The Plague",
+      "URIName": "Adiris",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fe/K15_ThePlague_Portrait.png/revision/latest?cb=20240517103048",
+      "link": "https://deadbydaylight.fandom.com/wiki/Adiris"
+    },
+    {
+      "name": "Danny Johnson",
+      "killerName": "The Ghost Face",
+      "URIName": "Danny_Johnson",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K16_TheGhostFace_Portrait.png/revision/latest?cb=20240517103053",
+      "link": "https://deadbydaylight.fandom.com/wiki/Danny_Johnson"
+    },
+    {
+      "name": "Demogorgon",
+      "killerName": "The Demogorgon",
+      "URIName": "Demogorgon",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/75/K17_TheDemogorgon_Portrait.png/revision/latest?cb=20240517103057",
+      "link": "https://deadbydaylight.fandom.com/wiki/Demogorgon"
+    },
+    {
+      "name": "Kazan Yamaoka",
+      "killerName": "The Oni",
+      "URIName": "Kazan_Yamaoka",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/K18_TheOni_Portrait.png/revision/latest?cb=20240517103106",
+      "link": "https://deadbydaylight.fandom.com/wiki/Kazan_Yamaoka"
+    },
+    {
+      "name": "Caleb Quinn",
+      "killerName": "The Deathslinger",
+      "URIName": "Caleb_Quinn",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/K19_TheDeathslinger_Portrait.png/revision/latest?cb=20240517103108",
+      "link": "https://deadbydaylight.fandom.com/wiki/Caleb_Quinn"
+    },
+    {
+      "name": "Pyramid Head",
+      "killerName": "The Executioner",
+      "URIName": "Pyramid_Head",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K20_TheExecutioner_Portrait.png/revision/latest?cb=20240517103116",
+      "link": "https://deadbydaylight.fandom.com/wiki/Pyramid_Head"
+    },
+    {
+      "name": "Talbot Grimes",
+      "killerName": "The Blight",
+      "URIName": "Talbot_Grimes",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1f/K21_TheBlight_Portrait.png/revision/latest?cb=20240517103126",
+      "link": "https://deadbydaylight.fandom.com/wiki/Talbot_Grimes"
+    },
+    {
+      "name": "Charlotte &amp; Victor Deshayes",
+      "killerName": "The Twins",
+      "URIName": "Charlotte_%26_Victor_Deshayes",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/17/K22_TheTwins_Portrait.png/revision/latest?cb=20240517102938",
+      "link": "https://deadbydaylight.fandom.com/wiki/Charlotte_%26_Victor_Deshayes"
+    },
+    {
+      "name": "Ji-Woon Hak",
+      "killerName": "The Trickster",
+      "URIName": "Ji-Woon_Hak",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K23_TheTrickster_Portrait.png/revision/latest?cb=20240517102949",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ji-Woon_Hak"
+    },
+    {
+      "name": "Nemesis T-Type",
+      "killerName": "The Nemesis",
+      "URIName": "Nemesis_T-Type",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/67/K24_TheNemesis_Portrait.png/revision/latest?cb=20240517103009",
+      "link": "https://deadbydaylight.fandom.com/wiki/Nemesis_T-Type"
+    },
+    {
+      "name": "Elliot Spencer",
+      "killerName": "The Cenobite",
+      "URIName": "Elliot_Spencer",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K25_TheCenobite_Portrait.png/revision/latest?cb=20240517103027",
+      "link": "https://deadbydaylight.fandom.com/wiki/Elliot_Spencer"
+    },
+    {
+      "name": "Carmina Mora",
+      "killerName": "The Artist",
+      "URIName": "Carmina_Mora",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/01/K26_TheArtist_Portrait.png/revision/latest?cb=20240517103041",
+      "link": "https://deadbydaylight.fandom.com/wiki/Carmina_Mora"
+    },
+    {
+      "name": "Sadako Yamamura",
+      "killerName": "The Onryō",
+      "URIName": "Sadako_Yamamura",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5f/K27_TheOnryo_Portrait.png/revision/latest?cb=20240517103045",
+      "link": "https://deadbydaylight.fandom.com/wiki/Sadako_Yamamura"
+    },
+    {
+      "name": "Dredge",
+      "killerName": "The Dredge",
+      "URIName": "Dredge",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7e/K28_TheDredge_Portrait.png/revision/latest?cb=20240517103050",
+      "link": "https://deadbydaylight.fandom.com/wiki/Dredge"
+    },
+    {
+      "name": "Albert Wesker",
+      "killerName": "The Mastermind",
+      "URIName": "Albert_Wesker",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ec/K29_TheMastermind_Portrait.png/revision/latest?cb=20240517103054",
+      "link": "https://deadbydaylight.fandom.com/wiki/Albert_Wesker"
+    },
+    {
+      "name": "Tarhos Kovács",
+      "killerName": "The Knight",
+      "URIName": "Tarhos_Kov%C3%A1cs",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/K30_TheKnight_Portrait.png/revision/latest?cb=20240517103100",
+      "link": "https://deadbydaylight.fandom.com/wiki/Tarhos_Kov%C3%A1cs"
+    },
+    {
+      "name": "Adriana Imai",
+      "killerName": "The Skull Merchant",
+      "URIName": "Adriana_Imai",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K31_TheSkullMerchant_Portrait.png/revision/latest?cb=20240517103102",
+      "link": "https://deadbydaylight.fandom.com/wiki/Adriana_Imai"
+    },
+    {
+      "name": "HUX-A7-13",
+      "killerName": "The Singularity",
+      "URIName": "HUX-A7-13",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K32_TheSingularity_Portrait.png/revision/latest?cb=20240517103113",
+      "link": "https://deadbydaylight.fandom.com/wiki/HUX-A7-13"
+    },
+    {
+      "name": "Xenomorph",
+      "killerName": "The Xenomorph",
+      "URIName": "Xenomorph",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K33_TheXenomorph_Portrait.png/revision/latest?cb=20240517103121",
+      "link": "https://deadbydaylight.fandom.com/wiki/Xenomorph"
+    },
+    {
+      "name": "Charles Lee Ray",
+      "killerName": "The Good Guy",
+      "URIName": "Charles_Lee_Ray",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K34_TheGoodGuy_Portrait.png/revision/latest?cb=20240517103130",
+      "link": "https://deadbydaylight.fandom.com/wiki/Charles_Lee_Ray"
+    },
+    {
+      "name": "Unknown",
+      "killerName": "The Unknown",
+      "URIName": "Unknown",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/51/K35_TheUnknown_Portrait.png/revision/latest?cb=20240517102932",
+      "link": "https://deadbydaylight.fandom.com/wiki/Unknown"
+    },
+    {
+      "name": "Vecna",
+      "killerName": "The Lich",
+      "URIName": "Vecna",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f0/K36_TheLich_Portrait.png/revision/latest?cb=20240517102944",
+      "link": "https://deadbydaylight.fandom.com/wiki/Vecna"
+    },
+    {
+      "name": "Dracula",
+      "killerName": "The Dark Lord",
+      "URIName": "Dracula",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/62/K37_TheDarkLord_Portrait.png/revision/latest?cb=20240806171117",
+      "link": "https://deadbydaylight.fandom.com/wiki/Dracula"
+    },
+    {
+      "name": "Portia Maye",
+      "killerName": "The Houndmaster",
+      "URIName": "Portia_Maye",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/96/K38_TheHoundmaster_Portrait.png/revision/latest?cb=20241107164729",
+      "link": "https://deadbydaylight.fandom.com/wiki/Portia_Maye"
+    },
+    {
+      "name": "Ken Kaneki",
+      "killerName": "The Ghoul",
+      "URIName": "Ken_Kaneki",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K39_TheGhoul_Portrait.png/revision/latest?cb=20250516092323",
+      "link": "https://deadbydaylight.fandom.com/wiki/Ken_Kaneki"
+    },
+    {
+      "name": "William Afton",
+      "killerName": "The Animatronic",
+      "URIName": "William_Afton",
+      "iconURL": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/02/K40_TheAnimatronic_Portrait.png/revision/latest?cb=20250527205857",
+      "link": "https://deadbydaylight.fandom.com/wiki/William_Afton"
+    }
+  ]
+}

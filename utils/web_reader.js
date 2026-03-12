@@ -1,33 +1,33 @@
-import http from 'http'
-import https from 'https'
+import puppeteer from 'puppeteer'
 
 class webReader {
-  // https://stackoverflow.com/a/48729712
-  // sidanmor, 11th of February, 2018
-  static readWebsite (url) {
-    return new Promise((resolve, reject) => {
-      let client = http
-
-      if (url.toString().indexOf('https') === 0) {
-        client = https
-      }
-
-      client.get(url, (resp) => {
-        let data = ''
-
-        // A chunk of data has been recieved.
-        resp.on('data', (chunk) => {
-          data += chunk
-        })
-
-        // The whole response has been received. Print out the result.
-        resp.on('end', () => {
-          resolve(data)
-        })
-      }).on('error', (err) => {
-        reject(err)
+  static async readWebsite(url) {
+    let browser
+    try {
+      browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
       })
-    })
+
+      const page = await browser.newPage()
+
+      // Set a more natural user agent to reduce likelihood of blocking
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+
+      // Navigate to the URL and wait for the network to be mostly idle
+      await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 })
+
+      // Extract the full HTML
+      const html = await page.content()
+      return html
+    } catch (error) {
+      console.error(`Failed to read website: ${url}`, error)
+      throw error
+    } finally {
+      if (browser) {
+        await browser.close()
+      }
+    }
   }
 }
 
