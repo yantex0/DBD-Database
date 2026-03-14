@@ -14,45 +14,59 @@
   </a>
 </div>
 
-## Table of Contents
-- [Features](#features)
-- [How to Use](#how-to-use)
-- [Data Structure](#data-structure)
+---
 
-## Features
-- **Organized:** Outputs parsed data neatly into standalone JSON files.
-- **Up-to-date:** Allows you to fetch the latest data from the [Dead by Daylight - Wiki](https://deadbydaylight.fandom.com/wiki/Dead_by_Daylight_Wiki) whenever you need it via a headless Puppeteer browser.
-- **No Database Required:** Modified from its original form to write directly to the local filesystem inside the `data/` folder, skipping MongoDB configuration entirely.
+> **⚠️ Merged into chaoticshuffle**
+>
+> The scraper scripts from this directory have been moved into the `chaoticshuffle` Worker project at `chaoticshuffle/scripts/`.  
+> All future work on the scraper should happen there.
+>
+> **New location:** `d:\Cloudflare\chaoticshuffle\scripts\`  
+> **New docs:** [`chaoticshuffle/scripts/README.md`](../chaoticshuffle/scripts/README.md)
 
-## How to Use
-1. Install dependencies:
-   ```bash
-   pnpm install
-   # Ensure puppeteer browsers are installed if not done already:
-   npx puppeteer browsers install chrome
-   ```
+---
 
-2. Run the update script:
-   ```bash
-   node update.js
-   ```
+## New Workflow (from `chaoticshuffle/`)
 
-The script will generate 4 files in the `data/` directory:
-- `killer_perks.json`
-- `survivor_perks.json`
-- `killers.json`
-- `survivors.json`
+```bash
+# Install deps
+pnpm install
 
-3. Create the Database Seed for Cloudflare D1:
-   ```bash
-   node generate_seed.js
-   ```
-   This reads the 4 JSON files in the `data/` directory and creates `database_seed.sql`. This file contains the schema and bulk INSERT operations.
+# Install Puppeteer's Chrome binary (first time only)
+npx puppeteer browsers install chrome
 
-4. Execute into Cloudflare D1 (if using Wrangler locally):
-   ```bash
-   wrangler d1 execute <DATABASE_NAME> --local --file=./database_seed.sql
-   ```
+# Scrape wiki + generate SQL seed in one step
+pnpm scrape
+```
+
+This produces `data/` JSON files and `database_seed.sql` in the `chaoticshuffle/` root.
+
+### Apply seed to D1
+
+```bash
+# Local dev
+wrangler d1 execute chaoticshuffle-db --local --file=./database_seed.sql
+
+# Production
+wrangler d1 execute chaoticshuffle-db --remote --file=./database_seed.sql
+```
+
+---
+
+## Legacy Reference
+
+The original standalone workflow (before the merge) used to be:
+
+```bash
+# (in DBD-Database/)
+pnpm install
+node update.js        # → data/*.json
+node generate_seed.js # → database_seed.sql
+```
+
+This folder is retained for historical reference only.
+
+---
 
 ## Data Structure
 
@@ -67,8 +81,7 @@ Perks (`killer_perks.json`, `survivor_perks.json`):
     "contentText": "Same as `content` without HTML elements",
     "characterName": "Name of Character perk belongs to (Omitted if general perk)",
     "character": "URIName of Character perk belongs to (Omitted if general perk)"
-  }
-  ]
+  }]
 }
 ```
 
@@ -80,8 +93,7 @@ Survivors (`survivors.json`):
     "URIName": "URL safe string (name of survivor)",
     "iconURL": "Character image URL",
     "link": "Character URL at https://deadbydaylight.fandom.com/"
-  }
-  ]
+  }]
 }
 ```
 
@@ -94,7 +106,6 @@ Killers (`killers.json`):
     "URIName": "URL safe string (name of Killer)",
     "iconURL": "Character image URL",
     "link": "Character URL at https://deadbydaylight.fandom.com/"
-  }
-  ]
+  }]
 }
 ```
